@@ -64,7 +64,15 @@ PRODUCT_PACKAGES += \
     libQcomUI \
     libtilerenderer
 
+<<<<<<< HEAD
 # QCOM OMX
+=======
+# Power HAL
+PRODUCT_PACKAGES += \
+    power.msm7x30
+
+# Media
+>>>>>>> 0a8a224... initial msm7x30 power HAL
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libOmxCore \
