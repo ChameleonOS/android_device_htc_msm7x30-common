@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.msm7x30 \
+    audio_policy.conf \
     audio.primary.msm7x30 \
     libaudioutils
 
@@ -64,15 +65,11 @@ PRODUCT_PACKAGES += \
     libQcomUI \
     libtilerenderer
 
-<<<<<<< HEAD
-# QCOM OMX
-=======
 # Power HAL
 PRODUCT_PACKAGES += \
     power.msm7x30
 
-# Media
->>>>>>> 0a8a224... initial msm7x30 power HAL
+# QCOM OMX
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libOmxCore \
@@ -83,6 +80,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    libsurfaceflinger_client \
     com.android.future.usb.accessory \
     Torch
 
