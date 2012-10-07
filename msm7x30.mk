@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Qualcomm scripts
+PRODUCT_COPY_FILES += \
+    device/htc/msm7x30-common/prebuilt/init.post_boot.sh:system/etc/init.post_boot.sh \
+    device/htc/msm7x30-common/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -51,6 +56,9 @@ PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/media_profiles.xml:system/etc/media_profiles.xml \
     device/htc/msm7x30-common/media_codecs.xml:system/etc/media_codecs.xml
 
+# Copy bcm4329 firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -81,7 +89,10 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libdivxdrmdecrypt \
     libOmxVdec \
-    libOmxVenc
+    libOmxVenc \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libI420colorconvert
 
 # Misc
 PRODUCT_PACKAGES += \
