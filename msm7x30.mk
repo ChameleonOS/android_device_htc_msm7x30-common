@@ -90,8 +90,6 @@ PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libOmxVdec \
     libOmxVenc \
-    libOmxAacEnc \
-    libOmxAmrEnc \
     libI420colorconvert
 
 # Misc
