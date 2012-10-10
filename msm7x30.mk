@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-# Qualcomm scripts
-PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/prebuilt/init.post_boot.sh:system/etc/init.post_boot.sh \
-    device/htc/msm7x30-common/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -53,6 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # media configs
 PRODUCT_COPY_FILES += \
+    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf \
     device/htc/msm7x30-common/media_profiles.xml:system/etc/media_profiles.xml \
     device/htc/msm7x30-common/media_codecs.xml:system/etc/media_codecs.xml
 
@@ -65,6 +61,7 @@ PRODUCT_PACKAGES += \
     audio_policy.msm7x30 \
     audio_policy.conf \
     audio.primary.msm7x30 \
+    audio.usb.default \
     libaudioutils
 
 # Video
