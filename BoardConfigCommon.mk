@@ -18,7 +18,7 @@
 TARGET_NO_BOOTLOADER := true
 
 # Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
+TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-common
 
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
